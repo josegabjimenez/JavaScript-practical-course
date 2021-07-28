@@ -1,0 +1,541 @@
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #51dacf;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 6em;
+  background-color: #0c4762;
+}
+
+.header__logo {
+  color: #f4eeee;
+  border-radius: 0.4em;
+  padding: 0.3em;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-transition: padding 0.4s;
+  transition: padding 0.4s;
+}
+
+.header__logo span {
+  color: #51dacf;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.header__logo:hover {
+  padding: 0.5em;
+}
+
+.header__nav {
+  height: 100%;
+}
+
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  list-style: none;
+}
+
+.header__nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.3em;
+  min-width: 80px;
+  width: 8vw;
+  color: #f4eeee;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header__nav ul :hover {
+  background-color: #51dacf;
+  color: #0c4762;
+  padding: 0.5em;
+  -webkit-box-shadow: 0px -10px 10px 0px black;
+          box-shadow: 0px -10px 10px 0px black;
+}
+
+.figuresSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: calc(100vh - 10em);
+}
+
+.squareForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 28%;
+  height: 60%;
+  text-align: center;
+  padding: 1em;
+  background-color: lightcoral;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.squareForm h2 {
+  margin: 1em;
+}
+
+.squareForm label {
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.squareForm #squareSide {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.squareForm .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1em 0 2em 0;
+  width: 80%;
+}
+
+.squareForm .buttons button {
+  width: 48%;
+  height: 2.5em;
+  border-radius: 2em;
+  background-color: #c56868;
+  border: 2px solid #c56868;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.squareForm .buttons :hover {
+  background-color: lightcoral;
+}
+
+.squareForm .buttons :active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.squareForm #squareResult {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1.5em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.triangleForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 28%;
+  height: 60%;
+  text-align: center;
+  padding: 1em;
+  background-color: #B5EAEA;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.triangleForm h3 {
+  font-weight: 400;
+}
+
+.triangleForm .labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+}
+
+.triangleForm .labels label {
+  min-width: 80px;
+  width: 100px;
+}
+
+.triangleForm .labels input {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.triangleForm .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+}
+
+.triangleForm .buttons button {
+  width: 48%;
+  height: 2.5em;
+  border-radius: 2em;
+  background-color: #98c4c4;
+  border: 2px solid #98c4c4;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.triangleForm .buttons :hover {
+  background-color: #B5EAEA;
+}
+
+.triangleForm .buttons :active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.triangleForm #triangleResult {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1.5em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.circleForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 28%;
+  height: 60%;
+  text-align: center;
+  padding: 1em;
+  background-color: #FFE194;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.circleForm h2 {
+  margin: 1em;
+}
+
+.circleForm label {
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.circleForm #circleRadius {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.circleForm .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1em 0 2em 0;
+  width: 80%;
+}
+
+.circleForm .buttons button {
+  width: 48%;
+  height: 2.5em;
+  border-radius: 2em;
+  background-color: #d6bd7d;
+  border: 2px solid #d6bd7d;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.circleForm .buttons :hover {
+  background-color: #FFE194;
+}
+
+.circleForm .buttons :active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.circleForm #circleResult {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1.5em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 4em;
+  color: #0c4762;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #0c4762;
+  font-weight: bold;
+  -webkit-transition: font-size 0.4s;
+  transition: font-size 0.4s;
+}
+
+.footer a:hover {
+  color: black;
+  font-size: 1.1em;
+}
+
+.footer img {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.footer__platziText span#js {
+  color: yellow;
+  font-weight: bold;
+}
+
+.footer__platziText span#challenge {
+  font-weight: bold;
+}
+
+.footer p {
+  margin-right: 0.3em;
+}
+
+@media only screen and (max-width: 768px) {
+  .figuresSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .squareForm {
+    width: 80%;
+    max-width: 25em;
+    height: 30em;
+    margin: 1em;
+    margin-top: 2em;
+  }
+  .triangleForm {
+    width: 80%;
+    max-width: 25em;
+    height: 30em;
+    margin: 1em;
+  }
+  .circleForm {
+    width: 80%;
+    max-width: 25em;
+    height: 30em;
+    margin: 1em;
+  }
+}
+/*# sourceMappingURL=figures.css.map */
