@@ -65,3 +65,20 @@ const calculateCircleArea = () => {
     const area = pi * Math.pow(radius,2);
     result.value = `${area.toFixed(2)} cm²`;
 }
+
+// Isosceles triangle
+
+const calculateIsoscelesTriangle = (sideA, sideB, base) => {
+    if(sideA == sideB){
+        const height = Math.sqrt(sideA**2 - (base/2)**2);
+        if(height > 0){
+            console.log(`The isosceles triangle height is: ${height}`);
+        } else {
+            console.log("That triangle is impossible");
+        }
+    } else {
+        console.log("That isn't an isosceles triangle");
+    }
+}
+
+calculateIsoscelesTriangle(10,10,15);

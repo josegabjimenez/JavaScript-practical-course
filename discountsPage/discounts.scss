@@ -1,0 +1,63 @@
+@import '../mainPage/style.scss';
+@import '../mainPage/_media.scss';
+
+.discountSection {
+	@include flex(center, center, row);
+	height: calc(100vh - 10em);
+	width: 100%;
+}
+
+.discountForm {
+	@include form(#f58b54);
+
+	min-width: 500px;
+	height: 80%;
+	padding: 2em;
+
+	h2 {
+		font-size: 2em;
+		font-weight: bold;
+		margin: 1em;
+	}
+
+	div {
+		@include flex(space-around, center, row);
+		width: 100%;
+		// background-color: blue;
+		margin: 1em;
+
+		label {
+			width: 40%;
+		}
+
+		input {
+			@include input();
+			width: 50%;
+		}
+	}
+
+	button {
+		@include button(#ca7145);
+		margin: 2em;
+		&:hover {
+			background-color: #f58b54;
+		}
+		&:active {
+			transform: scale(1.1);
+		}
+	}
+
+	#finalPrice {
+		@include input;
+		border-radius: 0;
+		border: none;
+		border-bottom: 2px solid black;
+		font-size: 1.5em;
+		box-shadow: none;
+		margin-bottom: 1em;
+	}
+
+	#errorMessage {
+		@include errorMessage(#4f0e0e);
+	}
+}

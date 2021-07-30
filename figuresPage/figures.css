@@ -1,3 +1,30 @@
+/**
+*
+* Testing
+*
+**/
+@-webkit-keyframes errorMessageAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes errorMessageAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Fira Sans', sans-serif;
   background-color: #51dacf;
@@ -67,7 +94,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0.3em;
-  min-width: 80px;
+  min-width: 100px;
   width: 8vw;
   color: #f4eeee;
   font-weight: 500;
@@ -76,12 +103,79 @@ body {
   transition: all 0.2s;
 }
 
-.header__nav ul :hover {
+.header__nav ul li:hover {
   background-color: #51dacf;
   color: #0c4762;
   padding: 0.5em;
   -webkit-box-shadow: 0px -10px 10px 0px black;
           box-shadow: 0px -10px 10px 0px black;
+}
+
+@media (max-width: 768px) {
+  .header__nav ul {
+    display: none;
+  }
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 4em;
+  color: #0c4762;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #0c4762;
+  font-weight: bold;
+  -webkit-transition: font-size 0.4s;
+  transition: font-size 0.4s;
+}
+
+.footer a:hover {
+  color: black;
+  font-size: 1.1em;
+}
+
+.footer img {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.footer__platziText span#js {
+  color: yellow;
+  font-weight: bold;
+}
+
+.footer__platziText span#challenge {
+  font-weight: bold;
+}
+
+.footer p {
+  margin-right: 0.3em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .figuresSection {
@@ -171,7 +265,7 @@ body {
   border-radius: 2em;
   background-color: #c56868;
   border: 2px solid #c56868;
-  font-weight: 500;
+  font-weight: bold;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -228,7 +322,7 @@ body {
   height: 60%;
   text-align: center;
   padding: 1em;
-  background-color: #B5EAEA;
+  background-color: #b5eaea;
   border-radius: 10%;
   -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
@@ -303,7 +397,7 @@ body {
   border-radius: 2em;
   background-color: #98c4c4;
   border: 2px solid #98c4c4;
-  font-weight: 500;
+  font-weight: bold;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -314,7 +408,7 @@ body {
 }
 
 .triangleForm .buttons :hover {
-  background-color: #B5EAEA;
+  background-color: #b5eaea;
 }
 
 .triangleForm .buttons :active {
@@ -360,7 +454,7 @@ body {
   height: 60%;
   text-align: center;
   padding: 1em;
-  background-color: #FFE194;
+  background-color: #ffe194;
   border-radius: 10%;
   -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
@@ -413,7 +507,7 @@ body {
   border-radius: 2em;
   background-color: #d6bd7d;
   border: 2px solid #d6bd7d;
-  font-weight: 500;
+  font-weight: bold;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -424,7 +518,7 @@ body {
 }
 
 .circleForm .buttons :hover {
-  background-color: #FFE194;
+  background-color: #ffe194;
 }
 
 .circleForm .buttons :active {
@@ -450,55 +544,6 @@ body {
   font-size: 1.5em;
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 4em;
-  color: #0c4762;
-}
-
-.footer a {
-  text-decoration: none;
-  color: #0c4762;
-  font-weight: bold;
-  -webkit-transition: font-size 0.4s;
-  transition: font-size 0.4s;
-}
-
-.footer a:hover {
-  color: black;
-  font-size: 1.1em;
-}
-
-.footer img {
-  width: 2em;
-  margin-right: 1em;
-}
-
-.footer__platziText span#js {
-  color: yellow;
-  font-weight: bold;
-}
-
-.footer__platziText span#challenge {
-  font-weight: bold;
-}
-
-.footer p {
-  margin-right: 0.3em;
 }
 
 @media only screen and (max-width: 768px) {

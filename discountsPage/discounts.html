@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop #1 | Geometric Figures</title>
+    <link rel="stylesheet" href="../mainPage/style.css">
+    <link rel="stylesheet" href="./discounts.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,800;1,400;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__logo">
+            <span>Math</span>App
+        </h1>
+        <nav class="header__nav">
+            <ul>
+                <li>Geometry</li>
+                <li>Discounts</li>
+                <li>Statistics</li>
+                <li>Salary</li>
+            </ul>
+            <div class="header__nav__phone">
+                X
+            </div>
+            
+        </nav>
+    </header>
+
+    <section class="discountSection">
+        <form class="discountForm" onsubmit="return false">
+            <h2>Discounts %</h2>
+            <div>
+                <label for="price">What is the original price? ($)</label>
+                <input id="price" type="number" min="0" step="0.01"/>
+            </div>
+            <div>
+                <label for="discount">What is the discount? (%)</label>
+                <input id="discount" type="number" min="0" step="0.01"/>
+            </div>
+
+            <button onclick="calculateDiscount()">Final price</button>
+            <input id="finalPrice" readonly />
+            <p id="errorMessage"></p>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <img src="https://static.platzi.com/media/blog/unnamed-8089fc33-6322-4bd3-85de-1da032257d4b.png" alt="Platzi Logo">
+        <p class="footer__platziText">Platzi - <span id="js">JS </span> <span id="challenge">Challenge</span> </p>
+        <p>|</p>
+        <p class="footer__copyright"> Made by <a target="_blank" href="https://platzi.com/p/josegabjimenez/">@josegabjimenez</a> ©️ 2021 </p>
+    </footer>
+
+    <script src="./discounts.js"></script>
+</body>
+</html>

@@ -136,16 +136,7 @@ body {
 
 @media (max-width: 768px) {
   .header__nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: blue;
-    width: 100px;
-    height: 200px;
+    color: red;
   }
   .header__nav__phone {
     display: -webkit-box;
@@ -224,4 +215,150 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
-/*# sourceMappingURL=style.css.map */
+
+/**
+*
+* Testing
+*
+**/
+.discountSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: calc(100vh - 10em);
+  width: 100%;
+}
+
+.discountForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 28%;
+  height: 60%;
+  text-align: center;
+  padding: 1em;
+  background-color: #f58b54;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  min-width: 500px;
+  height: 80%;
+  padding: 2em;
+}
+
+.discountForm h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em;
+}
+
+.discountForm div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin: 1em;
+}
+
+.discountForm div label {
+  width: 40%;
+}
+
+.discountForm div input {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  width: 50%;
+}
+
+.discountForm button {
+  width: 48%;
+  height: 2.5em;
+  border-radius: 2em;
+  background-color: #ca7145;
+  border: 2px solid #ca7145;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  margin: 2em;
+}
+
+.discountForm button:hover {
+  background-color: #f58b54;
+}
+
+.discountForm button:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.discountForm #finalPrice {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1.5em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 1em;
+}
+
+.discountForm #errorMessage {
+  font-weight: bold;
+  color: #4f0e0e;
+  -webkit-animation: errorMessageAnimation 2s infinite ease alternate;
+          animation: errorMessageAnimation 2s infinite ease alternate;
+}
+/*# sourceMappingURL=discounts.css.map */
