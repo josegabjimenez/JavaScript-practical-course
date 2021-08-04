@@ -203,6 +203,32 @@ body {
   }
 }
 
+.welcomeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 10em);
+  text-align: center;
+}
+
+.welcomeSection h1 {
+  font-size: 4em;
+}
+
+.welcomeSection h3 {
+  font-weight: 500;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,23 +290,12 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.figuresSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: calc(100vh - 10em);
-}
-
-.squareForm {
+/**
+*
+* Testing
+*
+**/
+.statisticsSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,26 +309,33 @@ input[type='number'] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 28%;
-  height: 60%;
-  text-align: center;
-  padding: 1em;
-  background-color: lightcoral;
-  border-radius: 10%;
-  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  min-height: calc(100vh - 10em);
 }
 
-.squareForm h2 {
-  margin: 1em;
+.statisticsSection h1 {
+  margin: 2rem;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.squareForm label {
-  font-style: italic;
-  margin-bottom: 1em;
+.statisticsSection .statisticsTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }
 
-.squareForm #squareSide {
+.statisticsSection .statisticsTable input {
   background-color: transparent;
   border: none;
   width: 80%;
@@ -327,30 +349,12 @@ input[type='number'] {
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
 }
 
-.squareForm .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 1em 0 2em 0;
-  width: 80%;
-}
-
-.squareForm .buttons button {
+.statisticsSection .statisticsTable button {
   width: 48%;
   height: 2.5em;
   border-radius: 2em;
-  background-color: #c56868;
-  border: 2px solid #c56868;
+  background-color: black;
+  border: 2px solid black;
   font-weight: bold;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
@@ -359,38 +363,115 @@ input[type='number'] {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
+  color: white;
 }
 
-.squareForm .buttons :hover {
-  background-color: lightcoral;
+.statisticsSection .statisticsTable button:hover {
+  background-color: grey;
 }
 
-.squareForm .buttons :active {
+.statisticsSection .statisticsTable button:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.squareForm #squareResult {
-  background-color: transparent;
-  border: none;
-  width: 80%;
-  outline: none;
-  border: 2px solid black;
-  border-radius: 2em;
-  text-align: center;
-  font-size: 1em;
-  padding: 0.3em;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-  border: none;
-  border-bottom: 2px solid black;
-  font-size: 1.5em;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.statisticsSection .statisticsTable .numbersSet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.triangleForm {
+.statisticsSection .statisticsTable .numbersSet div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.statisticsSection .statisticsTable .numbersSet div input {
+  width: 65%;
+}
+
+.statisticsSection .statisticsTable .numbersSet div button {
+  width: 25%;
+}
+
+.statisticsSection .statisticsTable #numbersContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+  margin: 2em;
+}
+
+.statisticsSection .statisticsTable #numbersContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90px;
+  margin: 0.125em;
+}
+
+.statisticsSection .statisticsTable #numbersContainer label {
+  margin-right: 0.625em;
+}
+
+.statisticsSection .statisticsTable #numbersContainer input {
+  width: 2em;
+}
+
+@media (max-width: 768px) {
+  .statisticsSection .statisticsTable #numbersContainer {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .statisticsSection .statisticsTable #numbersContainer {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+.statisticsMeasures {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(23em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+  grid-gap: 15px;
+  width: 100%;
+}
+
+.statisticsMeasures .averageForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,81 +489,26 @@ input[type='number'] {
   height: 60%;
   text-align: center;
   padding: 1em;
-  background-color: #b5eaea;
+  background-color: #c9d8b6;
   border-radius: 10%;
   -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.triangleForm h3 {
-  font-weight: 400;
-}
-
-.triangleForm .labels {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 80%;
-}
-
-.triangleForm .labels label {
-  min-width: 80px;
-  width: 100px;
-}
-
-.triangleForm .labels input {
-  background-color: transparent;
-  border: none;
-  width: 80%;
-  outline: none;
-  border: 2px solid black;
-  border-radius: 2em;
-  text-align: center;
-  font-size: 1em;
-  padding: 0.3em;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
-}
-
-.triangleForm .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
   width: 90%;
+  height: 90%;
+  aspect-ratio: 1/1;
+  border: 2px solid rgba(255, 255, 255, 0.38);
 }
 
-.triangleForm .buttons button {
+.statisticsMeasures .averageForm button {
+  margin: 1em;
   width: 48%;
   height: 2.5em;
   border-radius: 2em;
-  background-color: #98c4c4;
-  border: 2px solid #98c4c4;
+  background-color: #929c84;
+  border: 2px solid #929c84;
   font-weight: bold;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
@@ -493,16 +519,16 @@ input[type='number'] {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.triangleForm .buttons :hover {
-  background-color: #b5eaea;
+.statisticsMeasures .averageForm button:hover {
+  background-color: #c9d8b6;
 }
 
-.triangleForm .buttons :active {
+.statisticsMeasures .averageForm button:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.triangleForm #triangleResult {
+.statisticsMeasures .averageForm input {
   background-color: transparent;
   border: none;
   width: 80%;
@@ -514,15 +540,17 @@ input[type='number'] {
   padding: 0.3em;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-  border: none;
-  border-bottom: 2px solid black;
-  font-size: 1.5em;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
-.circleForm {
+.statisticsMeasures .averageForm #errorMessageAverage {
+  font-weight: bold;
+  color: #4f0e0e;
+  -webkit-animation: errorMessageAnimation 2s infinite ease alternate;
+          animation: errorMessageAnimation 2s infinite ease alternate;
+  margin: 1em;
+}
+
+.statisticsMeasures .medianForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -540,59 +568,26 @@ input[type='number'] {
   height: 60%;
   text-align: center;
   padding: 1em;
-  background-color: #ffe194;
+  background-color: #c6b4ce;
   border-radius: 10%;
   -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  width: 90%;
+  height: 90%;
+  aspect-ratio: 1/1;
+  border: 2px solid rgba(255, 255, 255, 0.38);
 }
 
-.circleForm h2 {
+.statisticsMeasures .medianForm button {
   margin: 1em;
-}
-
-.circleForm label {
-  font-style: italic;
-  margin-bottom: 1em;
-}
-
-.circleForm #circleRadius {
-  background-color: transparent;
-  border: none;
-  width: 80%;
-  outline: none;
-  border: 2px solid black;
-  border-radius: 2em;
-  text-align: center;
-  font-size: 1em;
-  padding: 0.3em;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-}
-
-.circleForm .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 1em 0 2em 0;
-  width: 80%;
-}
-
-.circleForm .buttons button {
   width: 48%;
   height: 2.5em;
   border-radius: 2em;
-  background-color: #d6bd7d;
-  border: 2px solid #d6bd7d;
+  background-color: #7a6e80;
+  border: 2px solid #7a6e80;
   font-weight: bold;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
@@ -603,16 +598,16 @@ input[type='number'] {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.circleForm .buttons :hover {
-  background-color: #ffe194;
+.statisticsMeasures .medianForm button:hover {
+  background-color: #c6b4ce;
 }
 
-.circleForm .buttons :active {
+.statisticsMeasures .medianForm button:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.circleForm #circleResult {
+.statisticsMeasures .medianForm input {
   background-color: transparent;
   border: none;
   width: 80%;
@@ -624,49 +619,104 @@ input[type='number'] {
   padding: 0.3em;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-  border: none;
-  border-bottom: 2px solid black;
-  font-size: 1.5em;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
-@media only screen and (max-width: 768px) {
-  .figuresSection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: space-around;
-        -ms-flex-align: space-around;
-            align-items: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: auto;
-  }
-  .squareForm {
-    width: 80%;
-    max-width: 25em;
-    height: 30em;
-    margin: 1em;
-    margin-top: 2em;
-  }
-  .triangleForm {
-    width: 80%;
-    max-width: 25em;
-    height: 30em;
-    margin: 1em;
-  }
-  .circleForm {
-    width: 80%;
-    max-width: 25em;
-    height: 30em;
-    margin: 1em;
+.statisticsMeasures .medianForm #errorMessageMedian {
+  font-weight: bold;
+  color: #4f0e0e;
+  -webkit-animation: errorMessageAnimation 2s infinite ease alternate;
+          animation: errorMessageAnimation 2s infinite ease alternate;
+  margin: 1em;
+}
+
+.statisticsMeasures .modeForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 28%;
+  height: 60%;
+  text-align: center;
+  padding: 1em;
+  background-color: #b980f0;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  width: 90%;
+  height: 90%;
+  aspect-ratio: 1/1;
+  border: 2px solid rgba(255, 255, 255, 0.38);
+}
+
+.statisticsMeasures .modeForm button {
+  margin: 1em;
+  width: 48%;
+  height: 2.5em;
+  border-radius: 2em;
+  background-color: #765199;
+  border: 2px solid #765199;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.statisticsMeasures .modeForm button:hover {
+  background-color: #b980f0;
+}
+
+.statisticsMeasures .modeForm button:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.statisticsMeasures .modeForm input {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.statisticsMeasures .modeForm #errorMessageAverage {
+  font-weight: bold;
+  color: #4f0e0e;
+  -webkit-animation: errorMessageAnimation 2s infinite ease alternate;
+          animation: errorMessageAnimation 2s infinite ease alternate;
+  margin: 1em;
+}
+
+@media (max-width: 1366px) {
+  .statisticsMeasures {
+    font-size: 14px;
   }
 }
-/*# sourceMappingURL=figures.css.map */
+
+@media (max-width: 768px) {
+  .statisticsMeasures {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=statistics.css.map */

@@ -1,0 +1,191 @@
+@import '../mainPage/style.scss';
+@import '../mainPage/_media.scss';
+
+$firstColor: #c9d8b6;
+$firstColorDark: #929c84;
+$secondColor: #c6b4ce;
+$secondColorDark: #7a6e80;
+$thirdColor: #b980f0;
+$thirdColorDark: #765199;
+
+.statisticsSection {
+	@include flex(center, center, column);
+	min-height: calc(100vh - 10em);
+	h1 {
+		margin: 2rem;
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+	.statisticsTable {
+		@include flex(center, center, column);
+		width: 100%;
+		input {
+			@include input();
+		}
+
+		button {
+			@include button(black);
+			color: white;
+			&:hover {
+				background-color: grey;
+			}
+			&:active {
+				transform: scale(1.1);
+			}
+		}
+
+		.numbersSet {
+			@include flex(center, center, column);
+			div {
+				@include flex(space-between, center, row);
+				input {
+					width: 65%;
+				}
+				button {
+					width: 25%;
+				}
+			}
+		}
+
+		#numbersContainer {
+			display: grid;
+			grid-template-columns: auto auto auto auto auto auto;
+			margin: 2em;
+			div {
+				// background-color: green;
+				@include flex(space-around, center, row);
+				width: 90px;
+				margin: 0.125em;
+			}
+			label {
+				margin-right: 0.625em;
+			}
+			input {
+				width: 2em;
+			}
+			@include media('<=tablet') {
+				grid-template-columns: auto auto auto auto;
+			}
+
+			@include media('<=phone') {
+				grid-template-columns: auto auto auto;
+			}
+		}
+	}
+}
+
+//Measures
+
+.statisticsMeasures {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+	grid-gap: 15px;
+	width: 100%;
+
+	//Average Form
+	.averageForm {
+		@include form($firstColor);
+		align-self: center;
+		justify-self: center;
+		width: 90%;
+		height: 90%;
+		aspect-ratio: 1/1;
+		border: 2px solid rgba(255, 255, 255, 0.38);
+
+		button {
+			margin: 1em;
+			@include button($firstColorDark);
+			&:hover {
+				background-color: $firstColor;
+			}
+			&:active {
+				transform: scale(1.1);
+			}
+		}
+
+		input {
+			@include input();
+		}
+
+		#errorMessageAverage {
+			@include errorMessage($errorColor);
+			margin: 1em;
+		}
+	}
+
+	//Median Form
+
+	.medianForm {
+		@include form($secondColor);
+		align-self: center;
+		justify-self: center;
+		width: 90%;
+		height: 90%;
+		aspect-ratio: 1/1;
+		border: 2px solid rgba(255, 255, 255, 0.38);
+
+		button {
+			margin: 1em;
+			@include button($secondColorDark);
+			&:hover {
+				background-color: $secondColor;
+			}
+			&:active {
+				transform: scale(1.1);
+			}
+		}
+
+		input {
+			@include input();
+		}
+
+		#errorMessageMedian {
+			@include errorMessage($errorColor);
+			margin: 1em;
+		}
+	}
+
+	//Mode Form
+	.modeForm {
+		@include form($thirdColor);
+		align-self: center;
+		justify-self: center;
+		width: 90%;
+		height: 90%;
+		aspect-ratio: 1/1;
+		border: 2px solid rgba(255, 255, 255, 0.38);
+
+		button {
+			margin: 1em;
+			@include button($thirdColorDark);
+			&:hover {
+				background-color: $thirdColor;
+			}
+			&:active {
+				transform: scale(1.1);
+			}
+		}
+
+		input {
+			@include input();
+		}
+
+		#errorMessageAverage {
+			@include errorMessage($errorColor);
+			margin: 1em;
+		}
+	}
+}
+
+@include media('<=desktop') {
+	.statisticsMeasures {
+		font-size: 14px;
+	}
+}
+
+@include media('<=tablet') {
+	.statisticsMeasures {
+		font-size: 12px;
+	}
+}

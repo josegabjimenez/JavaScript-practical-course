@@ -106,7 +106,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0.3em;
   min-width: 100px;
   width: 8vw;
   color: #f4eeee;
@@ -118,10 +117,36 @@ body {
 
 .header__nav ul li:hover {
   background-color: #51dacf;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px -15px 10px 0px black;
+          box-shadow: 0px -15px 10px 0px black;
+}
+
+.header__nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  width: 100%;
+  color: #f4eeee;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header__nav ul li a:hover {
   color: #0c4762;
-  padding: 0.5em;
-  -webkit-box-shadow: 0px -10px 10px 0px black;
-          box-shadow: 0px -10px 10px 0px black;
 }
 
 .header__nav__phone {
@@ -129,14 +154,37 @@ body {
   width: 3em;
   height: 3em;
   color: #f4eeee;
-  border: 2px solid #f4eeee;
   border-radius: 15px;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .header__nav ul {
-    color: red;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: -100%;
+    top: 6em;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .header__nav ul li {
+    width: 100vw;
+    height: 4em;
+  }
+  .header__nav ul li:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .header__nav .active {
+    left: 0;
   }
   .header__nav__phone {
     display: -webkit-box;
@@ -153,6 +201,32 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+.welcomeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 10em);
+  text-align: center;
+}
+
+.welcomeSection h1 {
+  font-size: 4em;
+}
+
+.welcomeSection h3 {
+  font-weight: 500;
 }
 
 .footer {
@@ -235,8 +309,27 @@ input[type='number'] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: calc(100vh - 10em);
   width: 100%;
+  min-height: calc(100vh - 14em);
+  padding: 2em 0;
+}
+
+@media (max-width: 768px) {
+  .discountSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 4em 0;
+  }
+  .discountSection .discountForm {
+    min-width: auto;
+    width: 70vw;
+  }
+  .discountSection .couponsForm {
+    margin: 4em 0 0 0;
+  }
 }
 
 .discountForm {
@@ -261,6 +354,7 @@ input[type='number'] {
   border-radius: 10%;
   -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.38);
   min-width: 500px;
   height: 80%;
   padding: 2em;
@@ -360,5 +454,26 @@ input[type='number'] {
   color: #4f0e0e;
   -webkit-animation: errorMessageAnimation 2s infinite ease alternate;
           animation: errorMessageAnimation 2s infinite ease alternate;
+}
+
+.couponsForm {
+  margin-left: 4em;
+}
+
+.couponsForm ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
 }
 /*# sourceMappingURL=discounts.css.map */

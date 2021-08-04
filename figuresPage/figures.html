@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop #1 | Geometric Figures</title>
+    <title>Geometric Figures | MathApp</title>
     <link rel="stylesheet" href="../mainPage/style.css">
     <link rel="stylesheet" href="./figures.css">
 
@@ -20,12 +20,18 @@
             <span>Math</span>App
         </h1>
         <nav class="header__nav">
-            <ul>
-                <li>Geometry</li>
-                <li>Discounts</li>
-                <li>Statistics</li>
-                <li>Salary</li>
+            <ul id="nav">
+                <li><a href="../mainPage/main.html">Home</a></li>
+                <li><a href="../figuresPage/figures.html">Geometry</a></li>
+                <li><a href="../discountsPage/discounts.html">Discounts</a></li>
+                <li><a href="../statisticsPage/statistics.html">Statistics</a></li>
             </ul>
+            <div class="header__nav__phone" onclick="setMobileNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="28" height="28"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M14.33333,35.83333v14.33333h143.33333v-14.33333zM14.33333,78.83333v14.33333h143.33333v-14.33333zM14.33333,121.83333v14.33333h143.33333v-14.33333z"></path></g></g></svg>
+            </div>
         </nav>
     </header>
 
@@ -67,6 +73,7 @@
             </div>
 
             <input id="triangleResult" readonly>
+            <p id="errorMessage"></p>
         </form>
 
         <form class="circleForm" onsubmit="return false">
@@ -88,6 +95,7 @@
         <p class="footer__copyright"> Made by <a target="_blank" href="https://platzi.com/p/josegabjimenez/">@josegabjimenez</a> ©️ 2021 </p>
     </footer>
 
+    <script src="../mainPage/main.js"></script>
     <script src="./figures.js"></script>
 </body>
 </html>

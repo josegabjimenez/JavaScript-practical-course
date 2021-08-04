@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discounts | MathApp</title>
+    <title>Statistics | MathApp</title>
     <link rel="stylesheet" href="../mainPage/style.css">
-    <link rel="stylesheet" href="./discounts.css">
+    <link rel="stylesheet" href="./statistics.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
                 <li><a href="../discountsPage/discounts.html">Discounts</a></li>
                 <li><a href="../statisticsPage/statistics.html">Statistics</a></li>
             </ul>
-            <div class="header__nav__phone" onclick="setMobileNav()">
+            <div class="header__nav__phone" onclick="setMobileNav()"> 
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="28" height="28"
                     viewBox="0 0 172 172"
@@ -35,36 +35,45 @@
             
         </nav>
     </header>
-
-    <section class="discountSection">
-        <form class="discountForm" onsubmit="return false">
-            <h2>Discounts %</h2>
-            <div>
-                <label for="price">What is the original price? ($)</label>
-                <input id="price" type="number" min="0" step="0.01"/>
+    
+    <section class="statisticsSection">
+        <h1>Statistics</h1>
+        <article class="statisticsTable">
+            <div class="numbersSet">
+                <label for="numbersList">How many numbers do you want?</label>
+                <div>
+                    <input id="numbersList" type="number" min="0" />
+                    <button onclick="setListOfNumbers()">Enter</button>
+                </div>
             </div>
-            <div>
-                <label for="discount">What is the discount? (%)</label>
-                <input id="discount" type="number" min="0" step="0.01"/>
+            <div id="numbersContainer">
+                
             </div>
-            <div>
-                <label for="coupon">Do you have a coupon? (optional)</label>
-                <input id="coupon" type="text"/>
-            </div>
+        </article>
+        <article class="statisticsMeasures">
+            <form class="averageForm" onsubmit="return false">
+                <h2>Average</h2>
 
-            <button onclick="calculateDiscount()">Final price</button>
-            <input id="finalPrice" readonly />
-            <p id="errorMessage"></p>
-        </form>
+                <button onclick="calculateAverage()">Calculate average</button>
+                <input id="averageResult" readonly />
+                <p id="errorMessageAverage"></p>
+            </form>
 
-        <article class="couponsForm">
-            <h3>Coupons</h3>
-            <ul>
-                <li>coupon10</li>
-                <li>coupon20</li>
-                <li>coupon30</li>
+            <form class="medianForm" onsubmit="return false">
+                <h2>Median</h2>
 
-            </ul>
+                <button onclick="calculateMedian()">Calculate median</button>
+                <input id="medianResult" readonly />
+                <p id="errorMessageMedian"></p>
+            </form>
+
+            <form class="modeForm" onsubmit="return false">
+                <h2>Mode</h2>
+
+                <button onclick="calculateMode()">Calculate mode</button>
+                <input id="modeResult" readonly />
+                <p id="errorMessageMode"></p>
+            </form>
         </article>
 
     </section>
@@ -77,6 +86,6 @@
     </footer>
 
     <script src="../mainPage/main.js"></script>
-    <script src="./discounts.js"></script>
+    <script src="./statistics.js"></script>
 </body>
 </html>

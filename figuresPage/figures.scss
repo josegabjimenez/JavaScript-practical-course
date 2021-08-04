@@ -63,7 +63,6 @@
 		label {
 			min-width: 80px;
 			width: 100px;
-			// background-color: red;
 		}
 		input {
 			@include input;
@@ -74,7 +73,6 @@
 
 	.buttons {
 		@include flex(space-between, center, row);
-		// background-color: blue;
 		width: 90%;
 		button {
 			@include button(#98c4c4);
@@ -101,7 +99,6 @@
 
 .circleForm {
 	@include form(#ffe194);
-	// justify-content: space-around;
 	h2 {
 		margin: 1em;
 	}

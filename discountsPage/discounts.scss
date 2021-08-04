@@ -3,13 +3,29 @@
 
 .discountSection {
 	@include flex(center, center, row);
-	height: calc(100vh - 10em);
 	width: 100%;
+	min-height: calc(100vh - 14em);
+	padding: 2em 0;
+
+	@include media('<=tablet') {
+		flex-direction: column;
+		height: auto;
+		padding: 4em 0;
+
+		.discountForm {
+			min-width: auto;
+			width: 70vw;
+		}
+
+		.couponsForm {
+			margin: 4em 0 0 0;
+		}
+	}
 }
 
 .discountForm {
 	@include form(#f58b54);
-
+	border: 2px solid rgba(255, 255, 255, 0.38);
 	min-width: 500px;
 	height: 80%;
 	padding: 2em;
@@ -59,5 +75,14 @@
 
 	#errorMessage {
 		@include errorMessage(#4f0e0e);
+	}
+}
+
+.couponsForm {
+	margin-left: 4em;
+
+	ul {
+		@include flex(center, center, column);
+		list-style: none;
 	}
 }

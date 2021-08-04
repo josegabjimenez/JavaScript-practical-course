@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discounts | MathApp</title>
+    <title>Salary | MathApp</title>
     <link rel="stylesheet" href="../mainPage/style.css">
-    <link rel="stylesheet" href="./discounts.css">
+    <!-- <link rel="stylesheet" href="./discounts.css"> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,11 +20,12 @@
             <span>Math</span>App
         </h1>
         <nav class="header__nav">
-            <ul id="nav">
+            <ul id="nav"> 
                 <li><a href="../mainPage/main.html">Home</a></li>
                 <li><a href="../figuresPage/figures.html">Geometry</a></li>
                 <li><a href="../discountsPage/discounts.html">Discounts</a></li>
                 <li><a href="../statisticsPage/statistics.html">Statistics</a></li>
+                <!-- <li><a href="../salaryPage/salary.html">Salary</a></li> -->
             </ul>
             <div class="header__nav__phone" onclick="setMobileNav()">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -38,7 +39,7 @@
 
     <section class="discountSection">
         <form class="discountForm" onsubmit="return false">
-            <h2>Discounts %</h2>
+            <h2>Salary %</h2>
             <div>
                 <label for="price">What is the original price? ($)</label>
                 <input id="price" type="number" min="0" step="0.01"/>
@@ -56,17 +57,6 @@
             <input id="finalPrice" readonly />
             <p id="errorMessage"></p>
         </form>
-
-        <article class="couponsForm">
-            <h3>Coupons</h3>
-            <ul>
-                <li>coupon10</li>
-                <li>coupon20</li>
-                <li>coupon30</li>
-
-            </ul>
-        </article>
-
     </section>
 
     <footer class="footer">
@@ -76,7 +66,7 @@
         <p class="footer__copyright"> Made by <a target="_blank" href="https://platzi.com/p/josegabjimenez/">@josegabjimenez</a> ©️ 2021 </p>
     </footer>
 
-    <script src="../mainPage/main.js"></script>
-    <script src="./discounts.js"></script>
+    <script src="./salaries.js"></script>
+    <script src="./analysis.js"></script>
 </body>
 </html>
