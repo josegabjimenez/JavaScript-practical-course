@@ -11,3 +11,5 @@
 ## Third workshop - Arithmetic mode, median and average.
 
 - Calculate the arithmetic mode, median and average.
+
+Link: https://josegabjimenez.github.io/JavaScript-practical-course/
